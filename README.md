@@ -1,404 +1,109 @@
-TakeCash --- Relay per-to-per Transaction System (RPTS)
 
-for swift payments…
 
+Improve README.md
 
 
-# About The Project:
 
-Relay per-to-per Transaction System (RPTS) is a third party payment system, it allows users to stage funds, receive money and payments for daily business and personal needs and receive the staged asset to any bank account of choice, the system allocates six-digit dynamic transaction authorization pin for withdraw of staged funds through our [RPTS CONVERTER] software.
+Project Name
 
+The project is called "TakeCash - RPTS".
 
+Introduction
 
- 
+"TakeCash" is a modern payment solution  built using HTML, CSS, JavaScript , Php, and Sql. It allows users to easily receive and make payments securely and swiftly. Users can fund account,  Recieve payments,  and  make payments. The app is responsive and works well on different screen sizes.
 
- # Team:
+Deployed Site & Final Project Blog Article
 
-  
+Deployed Site: https://www.cuzradio.com/tc/CodemiTechAuthKit/login.html
 
-  Author: Julius O. Raphael
+Final Project Blog Article: https://link.medium.com/tZhwBv8FIyb
 
-  Assisted by: Samuel I. Ekene
+Author(s) LinkedIn
 
-  Documentation: E P. Agbidi
+Julius Raphael Ochai: https://www.linkedin.com/in/julius-raphael-2b2b74246
 
-   
+Installation
 
-    
+To install "TakeCash" on your local machine, follow these steps:
 
-    # Roles:
+Clone the repository: git clone https://github.com/codemidev/TakeCash.git
 
-    Julius O. Raphael: System / algorithm design / Development
+Navigate to the project directory: cd awesome-app
 
-    Samuel I. Ekene : UI/UX Design
+Open index.html in your web browser.
 
-    E P. Agbidi : Content writer
+Usage
 
-     
+How it works
 
-      
 
-       
+ 
 
-        
 
-        # Why Roles:
+#Staging funds:
 
-         
 
-         1) Julius O. Raphael has serial experience with complex system and algorithm design such as DBMS, OODBMS, Logic etc...
+ 
 
-         2) Samuel E. Igbinovia : is prolific with user interface and experience design
 
-         3) E P. Agbidi : is a meticulous Content writer, editor and virtual  ALX virtual assistant with grounded knowledge in technical writing.
+1) Users signup on the application to get access to their staging account
 
-          
 
-           
+2) Users stage’s any amount greater than $1 (one dollar)
 
-            
 
-             
+3) Users can scan or download and share generated receipt to the [RPTS CONVERTER] endpoint for payout.
 
-             # Technologies:
 
-              
+ 
 
-              Libraries: qrcode, AlertifyJs
 
-              Languages: Php, JavaScript, Sql, Html, css
+ 
 
-              Platform: GitHub, Flutterwave
 
-              Framework: Ajax, Bootstrap, JQuery, WordPress
+ 
 
-              Books:
 
-              Resources:
+# Withdraw funds
 
-               
 
-                
+1) Users signup to receive RPTS
 
-                 
 
-                  
+2) Users update profile with individual or corporate bank account number and KYC documents
 
-                   
 
-                   # Alternatives Technologies:
+3) Users can scan or upload RPTS receipt to the [RPTS CONVERTER] endpoint for payout with the transaction Authentication key.
 
-                    
 
-                    Platform: Gitlab, Paystack
 
-                    Framework: Axios, Tailwind, nodejs
 
-                     
+￼
 
-                      
+Contributing
 
-                       
+Contributions to "TakeCash" are welcome! To contribute, follow these steps:
 
-                       # Reasons for Platform alternatives:
+Fork the repository: https://github.com/codemidev/TakeCash
 
-                        
+Create a new branch: git checkout -b my-branch
 
-                        i) we choosed GitHub over Gitlab cause github is free , Gitlab is premium
+Make your changes and commit them: git commit -m "my changes"
 
-                        ii) Flutterwave over Paystack cause flutterwave has more easy to follow documentation
+Push to the branch: git push origin my-branch
 
-                         
+Create a new pull request.
 
-                          
+Related Projects
 
-                           
+Here are some related projects:
 
-                           # Reasons for Framework alternatives:
+ Squardco
+ namenayoupay
 
-                           i) Ajax works fine for us
+Licensing
 
-                           ii) Bootstrap is easier to implement cause of it's simple integration techniques.
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
-                           iii) WordPress Over Nodejs cause WordPress is secure and has many plug and play features that can boost development and save time.
-
-                            
-
-                             
-
-                              
-
-                               
-
-                                
-
-                                # Challenges:
-
-                                 
-
-                                 # What the project will solve:
-
-                                  
-
-                                  This Project: TakeCash --- RPTS is a modern payment solution built to make payments safer and more convenient, thus it profiles speedy payment solution with effective issue tracking
-
-                                   
-
-                                   # What the project will not solve:
-
-                                    
-
-                                    This project will not replace to role of conventional financial institutions but enhance their service through our technology.
-
-                                     
-
-                                      
-
-                                       
-
-                                       # Who benefits from this project?
-
-                                       TakeCash --- profiles simple payment solution for Individuals, Organizations and small business owners.
-
-                                        
-
-                                         
-
-                                          
-
-                                           
-
-                                           This project allows both foreign and local users.
-
-                                            
-
-                                            # Risk
-
-                                             
-
-                                             # Technical risk
-
-                                             i) Cyber Security
-
-                                             ii) Legacy Code
-
-                                             iii) Continuous Integration / Development (CI/CD)
-
-                                              
-
-                                              # Potential Impact:
-
-                                              i) Data bridge
-
-                                              ii) broken code
-
-                                              iii) un-upgradable system
-
-                                               
-
-                                                
-
-                                                # Technical risk solution:
-
-                                                 
-
-                                                 i) Active cyber team (Cyber security is the responsibility of every team member)
-
-                                                 ii) Contiouns code-base review
-
-                                                 iii) By containerizing and deploying software on secure infrastructure
-
-                                                  
-
-                                                   
-
-                                                    
-
-                                                     
-
-                                                     # Non-Technical risk
-
-                                                     Government policies
-
-                                                     License and clearance
-
-                                                      
-
-                                                       
-
-                                                       # Infrastructure
-
-                                                        
-
-                                                         
-
-                                                         # Branching Strategy
-
-                                                         Feature branching
-
-                                                          
-
-                                                           
-
-                                                           # Merging Strategy
-
-                                                           manual code review and merge
-
-                                                            
-
-                                                             
-
-                                                              
-
-                                                              #  Deployment Strategy
-
-                                                              blue-green deployment. The new version (the blue version) is brought up for testing and evaluation, while the users still use the stable version (the green version). When ready, the users are switched to the blue version
-
-                                                               
-
-                                                               # How to populate app with data
-
-                                                               - Test Key (API Sandbox)
-
-                                                                
-
-                                                                - Beta testing (Circle of few users)
-
-                                                                 
-
-                                                                  
-
-                                                                  # Testing tools
-
-                                                                   
-
-                                                                   Flutterwave test key
-
-                                                                   Xamp
-
-                                                                   Cpanel
-
-                                                                    
-
-                                                                     
-
-                                                                      
-
-                                                                       
-
-                                                                       # Existing solutions
-
-                                                                        
-
-                                                                         
-
-                                                                         Squadco , Flutterwave Contactless
-
-                                                                          
-
-                                                                          # Similarities
-
-                                                                           
-
-                                                                           Squadco  -  Scanner
-
-                                                                           Squadco  -  OTP
-
-                                                                           Squadco  -  Authentication
-
-                                                                            
-
-                                                                             
-
-                                                                             Flutterwave -  Scanner
-
-                                                                             Flutterwave  -  OTP
-
-                                                                             Flutterwave  -  Authentication
-
-                                                                              
-
-                                                                               
-
-                                                                                
-
-                                                                                 
-
-                                                                                 # Differences
-
-                                                                                  
-
-                                                                                  Squadco  -  Scanner
-
-                                                                                  Squadco  -  OTP
-
-                                                                                  Squadco  -  Authentication
-
-                                                                                   
-
-                                                                                    
-
-                                                                                    Flutterwave -  USSD
-
-                                                                                    Flutterwave  -  OTP
-
-                                                                                    Flutterwave  -  Authentication
-
-                                                                                     
-
-                                                                                      
-
-                                                                                      # Proven solution
-
-                                                                                      1) USSD
-
-                                                                                      2) QrCode
-
-                                                                                       
-
-                                                                                       # Reasons
-
-                                                                                       USSD : we are implementing the ussd transfer and payment system for effective preforms under poor network or hardware
-
-                                                                                       QrCode Scanner: for alternative payment resolution
-
-                                                                                        
-
-                                                                                         
-
-                                                                                          
-
-                                                                                           
-
-                                                                                            
-
-                                                                                            # How it works
-
-                                                                                             
-
-                                                                                             #Staging funds:
-
-                                                                                              
-
-                                                                                              1) Users signup on the application to get access to their staging account
-
-                                                                                              2) Users stage’s any amount greater than $1 (one dollar)
-
-                                                                                              3) Users can scan or download and share generated receipt to the [RPTS CONVERTER] endpoint for payout.
-
-                                                                                               
-
-                                                                                                
-
-                                                                                                 
-
-                                                                                                 # Withdraw funds
-
-                                                                                                 1) Users signup to receive RPTS
-
-                                                                                                 2) Users update profile with individual or corporate bank account number and KYC documents
-
-                                                                                                 3) Users can scan or upload RPTS receipt to the [RPTS CONVERTER] endpoint for payout with the transaction Authentication key.
-
-                                                                                                 4) or user the transfer form
+Resources
 
