@@ -1,0 +1,1497 @@
+
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from cuzradio.com/tc/CodemiTechAuthKit/Stellar-master/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Apr 2023 10:05:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TakeCash</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/simple-line-icons/css/simple-line-icons.css">
+    
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    
+    
+    <link rel="stylesheet" href="vendors/daterangepicker/daterangepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+  
+    
+    
+    
+    <script src="https://kit.fontawesome.com/0936d8cc4b.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="vendors/chartist/%20chartist.min.html">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    
+    
+    
+    
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="imag/tkbg.png" width="50px" height="50px" />
+    
+    <style>
+    
+
+#loader {
+            border: 12px solid yellow;
+            border-radius: 50%;
+            border-top: 12px solid yellow;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+                
+            }
+        }
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-image: url("https://cuzradio.com/App_playlist/playlist/CodemiTechAuthKit/realcuz.png/")
+            
+        }
+    
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 20%;
+  }
+  
+  .d-flex flex-row flex-nowrap overflow-auto::-webkit-scrollbar {
+  display: none;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+i{
+    font-size:45px;
+    margin-top:20px;
+    color:red;
+
+    
+}
+    
+}
+
+.col-:hover{
+    color: black;
+}
+
+#cs_audio {
+	    	display: none;
+	    }
+
+	    #cs_audioplayer {
+
+	        position: fixed;
+	        bottom: 0;
+	        left: 0;
+	        right: 0;
+	        text-align: center;
+	        height:5em;
+
+            background-color: #121212;
+            padding: 12px;
+            padding-top: 4px;
+            padding-bottom: 6px;
+            color: #fff;
+	    }
+
+		.cs_audio_bar {
+			background-color: #000;
+			width: 100%;
+			height: 6px;
+			position: relative;
+			cursor: pointer;
+			transition: 0.1s;
+		}
+
+		.cs_audio_bar_loaded {
+			background-color: #44363d;
+			width: 0%;
+			height: 6px;
+            position: absolute;
+            transition: 0.1s;
+		}
+		.cs_audio_bar_now {
+			background-color: #DC143C;
+			width: 0%;
+			height: 6px;
+            position: absolute;
+            z-index: 999;
+            transition: 0.1s;
+		}
+		#cs_play_pause_btn {
+			margin-left: 90px;
+			padding:10px;
+		}
+
+		#cs_play_pause_btn i{
+			font-size: 1.45em;position: relative; cursor: pointer; vertical-align: middle;
+			margin-bottom: 4px;
+			padding:10px;
+		}
+
+.avatar-wrapper{
+	position: relative;
+	height: 100px;
+	width: 100px;
+	margin: 30px auto;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 1px 1px 15px -5px black;
+	transition: all .3s ease;
+	&:hover{
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+	&:hover .profile-pic{
+		opacity: .5;
+	}
+	.profile-pic {
+    height: 50%;
+		width: 50%;
+		transition: all .3s ease;
+		&:after{
+			font-family: FontAwesome;
+			content: "\f007";
+			top: 0; left: 0;
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			font-size: 190px;
+			background: #ecf0f1;
+			color: #34495e;
+			text-align: center;
+		}
+	}
+	.upload-button {
+		position: absolute;
+		top: 0; left: 0;
+		height: 100%;
+		width: 100%;
+		.fa-arrow-circle-up{
+			position: absolute;
+			font-size: 234px;
+			top: -17px;
+			left: 0;
+			text-align: center;
+			opacity: 0;
+			transition: all .3s ease;
+			color: #34495e;
+		}
+		&:hover .fa-arrow-circle-up{
+			opacity: .9;
+		}
+	}
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  text-align: center;
+  
+}
+
+#egg{
+    font-size:50px;
+    margin-top:20px;
+    color: yellow;
+}
+
+#egg:hover{
+    color:black;
+}
+
+#kjs{
+    background: rgb(255,122,0);
+background: linear-gradient(90deg, rgba(255,22,0,1) 0%, rgba(246,29,22,1) 45%, rgba(246,04,22,1) 100%); 
+width:80px; 
+height:30px; 
+border-radius:15px; 
+font-size:10px; 
+font-weight:bold;
+box-shadow:3px 2px 3px grey;
+float:left;
+}
+
+.sticky-div {
+            position: sticky;
+            top: 0px;
+            padding: 10px 0px;
+        }
+        
+    .fabutton{
+        
+    }
+  
+    </style>
+    
+  </head>
+  <body>    <div id="loader" class="center"></div>
+      
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <!--<div class="navbar-brand-wrapper d-flex align-items-center">
+          <a class="navbar-brand brand-logo" href="index.html">
+           <img src="images/cnew.png" alt="logo" class="logo-dark" />
+          </a>
+        
+          
+          
+          </div>
+          
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="imag/tkbg.png" alt="takeCash" width ="120" height="120" />
+            
+          </a>--->
+        
+        <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+          <a href="testfile.html"> <img class="img-xs rounded-circle ml-2" src="imag/tkbg.png" alt="Profile image" style="width:80px; height:80px;">  <span class="font-weight-normal"> </span></a>
+          
+       <label>  <img src ="imag/Tktplvlv.png" width="35px" height="35px" alt="status" /> </label>
+          
+          <ul class="navbar-nav navbar-nav-right ml-auto">
+               
+            <!--<form class="search-form d-none d-md-block" action="#">
+              <i class="icon-magnifier"></i>
+            </form>--
+            <!--<li class="nav-item"><a href="#" class="nav-link"><i class="icon-basket-loaded"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li>-->
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="icon-speech"></i>
+                <span class="count">0</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+                <a class="dropdown-item py-3">
+                  <p class="mb-0 font-weight-medium float-left">Notifications </p>
+                  <!--<span class="badge badge-pill badge-primary float-right">View all</span>-->
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                  </div>
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject ellipsis font-weight-medium text-dark">Notifications appear here. </p>
+                    <!--<p class="font-weight-light small-text"> The meeting is cancelled </p>
+                  </div>
+                </a>
+               <!-- <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
+                  </div>
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
+                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="images/faces/face1.jpg" alt="image" class="img-sm profile-pic">
+                  </div>
+                  -<div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
+                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                  </div>-->
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown language-dropdown d-none d-sm-flex align-items-center">
+              <a class="nav-link d-flex align-items-center dropdown-toggle" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="d-inline-flex mr-3">
+                  <i class="flag-icon flag-icon-us"></i>
+                </div>
+                <span class="profile-text font-weight-normal">English</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
+                <a class="dropdown-item">
+                  <i class="flag-icon flag-icon-us"></i> English </a>
+                <a class="dropdown-item">
+                  <i class="flag-icon flag-icon-fr"></i> French </a>
+                <a class="dropdown-item">
+                  <i class="flag-icon flag-icon-ae"></i> Arabic </a>
+                <a class="dropdown-item">
+                  <i class="flag-icon flag-icon-ru"></i> Russian </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
+              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <!--<img class="img-xs rounded-circle ml-2" src="images/faces/face8.jpg" alt="Profile image">--></a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                <div class="dropdown-header text-center">
+                  <!--<img class="img-md rounded-circle" src="images/faces/face8.jpg" alt="Profile image">-->
+                  <p class="mb-1 mt-3"></p>
+                            
+         
+                </div>
+                
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-warning"></i> My Profile <span class="badge badge-pill badge-warning">1</span></a>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-speech text-warning"></i> Messages</a>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-energy text-warning"></i> Activity</a>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-question text-warning"></i> FAQ</a>
+                <a href="CodemiTechAuthKit/logout.html" class="dropdown-item"><i class="dropdown-item-icon icon-power text-warning"></i>Sign Out</a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <!--<div class="profile-image">
+                  <img class="img-xs rounded-circle" src="images/faces/face8.jpg" alt="profile image">
+                  <div class="dot-indicator bg-success"></div>
+                </div>-->
+                <div class="text-wrapper">
+                  <p class="profile-name"></p>
+                  <!--<p class="designation">Administrator</p>-->
+                </div>
+                <div class="icon-container">
+                  <i class="icon-bubbles"></i>
+                  <div class="dot-indicator bg-warning"></div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item nav-category" style ="color:orange">
+              <span class="nav-link">Dashboard</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testfile-2.html">
+                <span class="menu-title"></span>
+                <i class="icon-screen-desktop menu-icon" style ="color:orange"></i>
+              </a>
+            </li>
+            <li class="nav-item nav-category" style ="color:orange"><span class="nav-link"></span></li>
+            <li class="nav-item">
+              <a class="nav-link"  href="view_staged.html">
+                <span class="menu-title">Staged history</span>
+                <i class="icon-layers menu-icon" style ="color:orange"></i>
+              </a>
+              
+              <li class="nav-item nav-category" style ="color:orange"><span class="nav-link"></span></li>
+            <li class="nav-item">
+              <a class="nav-link"  href="view_withdrws.html">
+                <span class="menu-title">Withdrawal history</span>
+                <i class="icon-layers menu-icon" style ="color:orange"></i>
+              </a>
+              
+              
+              <li class="nav-item">
+              <a class="nav-link"  href="https://cuzradio.com/App_playlist/playlist/CodemiTechAuthKit/login.html">
+                <span class="menu-title">Profile</span>
+                <i class="icon-layers menu-icon" style ="color:orange"></i>
+              </a>
+              <!--<div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="completed_fgt.php">Completed Transactions </a></li>
+                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                </ul>
+              </div>-->
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.cuzradio.com/services/">
+                <span class="menu-title">Services</span>
+                <i class="icon-book-open menu-icon" style ="color:orange"></i>
+              </a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="menu-title">FAQ</span>
+                <i class="icon-chart menu-icon" style ="color:orange"></i>
+              </a>
+            </li>
+            <!--<li class="nav-item nav-category"><span class="nav-link">Extra</span></li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-title">General Pages</span>
+                <i class="icon-doc menu-icon"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item pro-upgrade">
+              <span class="nav-link">
+                <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="https://www.bootstrapdash.com/product/stellar-admin-template/" target="_blank"> <i class="icon-badge mx-2"></i> Upgrade to Pro</a>
+              </span>
+            </li>-->
+          </ul>
+          <div class ="container" style ="padding:20px margin:20px; ">
+              <a href="logout.html" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">Logout</a>
+              
+          </div>
+        </nav>
+        
+                
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+              <div class ="container" style ="padding:20px margin:20px; position:fixed-top">
+              <!--<a href="create_playList.php" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Create playlist</a>-->
+              
+              
+          </div><br><br>
+
+              
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+ <div id="demo" class="carousel slide" data-ride="carousel">
+      
+  <!--Indicators
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+  </ul>
+  
+  <!-- The slideshow
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imag/tkbg.jpg" alt="TakeCash" width="1100" height="500"></div>
+    <div class="carousel-item">
+      <img src="imag/tkbg.jpg" alt="TakeCash" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="imag/tkbg.jpg" alt="TakeCash" width="1100" height="500">
+    </div>
+  </div>--->
+  
+  <!-- Left and right controls
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>--->
+</div>
+
+            <!--<div class="row purchace-popup">
+              <div class="col-12 stretch-card grid-margin">
+                <div class="card card-secondary">-->
+                    
+                    
+                  <!--<span class="card-body d-lg-flex align-items-center">
+                    <!--<p class="mb-lg-0">Create a Playlist </p>-->
+                     <!--<a href="https://cuzradio.com/App_playlist/playlist/cuz_play_list.php" class="btn btn-danger btn-sm my-1 my-sm-0 ml-auto">Create a Playlist Now</a>
+                    
+                    <button class="close popup-dismiss ml-2">
+                      <span aria-hidden="true">&times;</span>--
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <br><br>--->
+            
+                  <!--- <div class ="container">
+                <h2>Featured Playlists</h2>
+            </div><br><br>
+            
+            <div class="d-flex flex-row flex-nowrap overflow-auto">
+                
+           
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+      
+                    <div class="card" >
+                       >
+                           <div class="card-body">
+                             <a href="testfile.html"><img class="card-img-top" src="imag/tkbg.jpg" width="1100" ></a>  
+                            </div>
+                    </div>
+      </div>
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="testfile.html"><img class="card-img-top" src="imag/tkbg.jpg" width="1100" ></a>  
+                            </div>
+                    </div>
+      </div>
+      
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="testfile.html"><img class="card-img-top" src="imag/tkbg.jpg" width="1100" ></a>  
+                            </div>
+                    </div>
+      </div>
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="testfile.html"><img class="card-img-top" src="imag/tkbg.jpg" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>---> 
+      
+      </div>
+      
+      
+                    <div class ="container">
+                <h2></h2>
+            </div><br><br>
+            
+                       <div class="d-flex flex-row flex-nowrap overflow-auto">
+                
+           
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+      
+                    <div class="card" >
+                       
+                           <div class="card-body" >
+                             <a href="splayer.html"><b id="balxy" style ="color:black;">Staged Balance</b>  <br>  <p id="staged_bal" </p><!-----<img class="card-img-top" src="imag/tkbg.jpg" width="1100" >----></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card">
+                       
+                           <div class="card-body">
+                             <a href="splayer.html"> <b id="balxy" style ="color:black;"> Wallet Balance</b><br> <small style ="color:black;">Not available</small><!----<img class="card-img-top" src="imag/tkbg.jpg" width="1100" >----> </a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body" >
+                             <a href="splayer.html"><b id="balxy" style ="color:black;"> Total Transaction</b> <br> <p id="staged_balt" style ="color:green; "> </p> <!----<img class="card-img-top" src="imag/tkbg.jpg" width="1100" >----></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body" >
+                             <a href="splayer.html"><b id="balxy" style ="color:black;"> Savings Balance</b><br> <small style ="color:black;">Not available</small><!----<img class="card-img-top" src="imag/tkbg.jpg" width="1100" >---></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      
+      <!--<div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="javascript:void(0);" onclick="cspd_change_music('https://cuzradio.com/App_playlist/10/CUZ*POP*MIX.mp3')"><img class="card-img-top" src="imag/tkbg.jpg" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      
+      <!--<div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="javascript:void(0);" onclick="cspd_change_music('https://cuzradio.com/App_playlist/10/DJ_Pop_Mix.mp3')"><img class="card-img-top" src="imag/tkbg.jpg" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>-->
+      
+      
+    
+      
+    
+      </div>
+      <div class="container-fluid" style="margin-top:80px;">
+  <h1>TakeCash</h1>
+  <p>Enjoy fast and relaible payments at afforadable rates.</p>
+  <p></p>
+  <div class="row">
+    <div class="col" style="background-color:whitesmoke; color:black;">
+     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" style=" color:black;">
+  Stage Funds 
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">TakeCash - Stage Funds</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          
+          
+          
+          
+          
+          
+          
+        <!---App   ---->
+      <center>
+      
+      <div >
+         <div class="container "
+  <div class="">
+    <div class="">
+        <br>      
+      <h4> Amonut: <b id="ish" style="font-weight:bold;"> </b>  </h4>
+      <h4> Charge: <b id="crg" style="font-weight:bold;"> </b> </h4>
+     <!--- <h4>Total  <b id="crtl" style="font-weight:bold;">  </b> </h4>--->
+      
+      
+      
+      <form method="POST" action="https://cuzradio.com/tc/CodemiTechAuthKit/Stellar-master/sub_handler.php">
+      <div class="">
+      
+            
+      
+<div class="form-group">
+    <div class="col-auto">
+      
+  <select class="form-control" id="cury" name="cury" onchange="callit()" required>
+    <option> Select Currency</option>
+    <option value="NGN">NGN</option>
+    <option vlaue="USD">USD</option>
+    <option value="GHC">Ghana </option>
+    <option value="GBP">B - Pounds</option>
+  </select>
+    </div>
+    </div>
+      <label for="email" class="form-label"></label>
+      <input type="number" class="form-control" id="amt" placeholder="Enter amount" value="" name="amt" onkeyup="callit();">
+      <br>
+      <input type="text" class="form-control" id="amt" placeholder="Enter description (Optional) " value="" name="amt_des" >
+      
+      <br>
+
+      
+      
+      </div>
+     <!---- <div class="mb-3">
+      <label for="pwd" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <div class="form-check mb-3">
+      <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+      </div>--->
+      <br>
+      <button type="submit" class="btn btn-warning" name="ctp" style="color:black;">Pay</button>
+      </form>
+      
+      </div>
+    <div class="">
+      <h3></h3>
+      <p>Realiable and fast</p>
+    </div>
+    
+  </div>
+</div>
+</div>
+</center>
+
+      <!---App xit--->
+      
+      </div>
+     <!------ <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color:black;">Close</button>
+        <button type="button" class="btn btn-warning" style="color:black;">Save changes</button>
+      </div>--->
+    </div>
+  </div>
+</div>
+
+   
+    <div class="col" style="background-color:whitesmoke; color:black;">
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalx" style="color:black;">
+ Recieve Money
+</button>
+
+                 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalx" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabelx">TakeCash - Recieve Money</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><a href="javascript:window.open('https://www.cuzradio.com/tc/CodemiTechAuthKit/Stellar-master/vendors/scanner/qr/tk/upload.html','_blank')"> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalx" style="color:black;">
+ UPLOAD <small>beta</small>
+</button></a></div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><a href="javascript:window.open('https://www.cuzradio.com/tc/CodemiTechAuthKit/Stellar-master/vendors/scanner/qr/tk/','_blank')"><button type="button" class="btn btn-warning" style="color:black;">
+ SCAN
+</button></a></div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color:black;">Close</button>
+        <button type="button" class="btn btn-warning" style="color:black;">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  </div>
+</div>
+      </div><br>
+      
+      
+     
+      
+      
+     
+      
+      
+      <br>
+      
+      <!------- <div class ="container">
+                <h2>Customized Playlist</h2>
+            </div><br><br>
+            
+                       <div class="d-flex flex-row flex-nowrap overflow-auto">
+                
+           
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+      
+                    <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="cplayer.html"><img class="card-img-top" src="images/vava.png" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+           <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="cplayer.html"><img class="card-img-top" src="images/chr.png" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      
+      <!--<div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="javascript:void(0);" onclick="cspd_change_music('https://www.cuzradio.com/App_playlist/10/jay_brady_vioce_comm_demo.mp3')"><img class="card-img-top" src="images/jay.png" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>-->
+      
+      <!--<div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="javascript:void(0);" onclick="cspd_change_music('https://cuzradio.com/App_playlist/10/MARY'S_BIRTHDAY_SHOUTOUT.mp3')"><img class="card-img-top" src="images/mry.png" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="cplayer.html"><img class="card-img-top" src="images/wrk.png" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      <div class="card card-block mx-2" style="min-width: 250px;">
+          <div class="card" >
+                       
+                           <div class="card-body">
+                             <a href="cplayer.html"><img class="card-img-top" src="images/ngt.png" width="1100" ></a>  
+                            </div>
+                            
+                    </div>
+      </div>
+      
+      <!-- bottom player 
+      
+      <audio id="cs_audio" controls>
+  <source src="assets/roll_on-noisy_oyster_CLIP.mp3" type="audio/mpeg">
+</audio>
+
+
+<div style="text-align: center;">
+
+<div id="cs_audioplayer">
+
+     <span style="position: relative;left: 0;float: left;font-size: 0.87em; padding:7px;"><span id="cs_audio_current_time">0:0</span></span>
+
+     <span id="cs_play_pause_btn" style="position: relative;">
+         <i class="far fa-play-circle" id="cs_audio_play"></i>
+         <i class="far fa-pause-circle" id="cs_audio_pause"></i>
+     </span>
+
+     <span id="cs_audio_sound" style="position: relative;right: 5px;float: right;margin-left: 15px;top: -2px;">
+         <i style="vertical-align: middle;font-size: 1.14em;" class="fas fa-volume-down"></i>
+         <div class="cs_volBar" style="height: 6px; width: 65px;background-color: #ccc;display: inline-block;cursor: pointer;">
+           <div class="cs_volume" style="height: 6px;width: 28px;background-color: red;position: absolute;"></div>
+         </div>
+
+     </span>
+     <span id="cs_audio_duration" style="position: relative;right: 0;float: right;padding-left: 10px;font-size: 0.87em;"></span>
+
+     <div class="cs_audio_bar">
+         <div class="cs_audio_bar_now"></div>
+         <div class="cs_audio_bar_loaded"></div>
+     </div>
+
+</div>
+</div>
+
+
+
+
+      
+      
+     bottom player ends -->
+      
+      </div><br><br>
+      
+      
+      
+      
+      
+      
+                  <!--<div class="row">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Sessions by channel</h4>
+                    <div class="aligner-wrapper">
+                      <canvas id="sessionsDoughnutChart" height="210"></canvas>
+                      <div class="wrapper d-flex flex-column justify-content-center absolute absolute-center">
+                        <h2 class="text-center mb-0 font-weight-bold">8.234</h2>
+                        <small class="d-block text-center text-muted  font-weight-semibold mb-0">Total Leads</small>
+                      </div>
+                    </div>
+                    <div class="wrapper mt-4 d-flex flex-wrap align-items-cente">
+                      <div class="d-flex">
+                        <span class="square-indicator bg-danger ml-2"></span>
+                        <p class="mb-0 ml-2">Assigned</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="square-indicator bg-success ml-2"></span>
+                        <p class="mb-0 ml-2">Not Assigned</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="square-indicator bg-warning ml-2"></span>
+                        <p class="mb-0 ml-2">Reassigned</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body performane-indicator-card">
+                    <div class="d-sm-flex">
+                      <h4 class="card-title flex-shrink-1">Performance Indicator</h4>
+                      <p class="m-sm-0 ml-sm-auto flex-shrink-0">
+                        <span class="data-time-range ml-0">7d</span>
+                        <span class="data-time-range active">2w</span>
+                        <span class="data-time-range">1m</span>
+                        <span class="data-time-range">3m</span>
+                        <span class="data-time-range">6m</span>
+                      </p>
+                    </div>
+                    <div class="d-sm-flex flex-wrap">
+                      <div class="d-flex align-items-center">
+                        <span class="dot-indicator bg-primary ml-2"></span>
+                        <p class="mb-0 ml-2 text-muted font-weight-semibold">Complaints (2098)</p>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <span class="dot-indicator bg-info ml-2"></span>
+                        <p class="mb-0 ml-2 text-muted font-weight-semibold"> Task Done (1123)</p>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <span class="dot-indicator bg-danger ml-2"></span>
+                        <p class="mb-0 ml-2 text-muted font-weight-semibold">Attends (876)</p>
+                      </div>
+                    </div>
+                    <div id="performance-indicator-chart" class="ct-chart mt-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Quick Action Toolbar Starts--
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="images/cnew.png" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/cnew.png" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/cnew.png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+            <!-- Quick Action Toolbar Ends--
+            <div class="row">
+              <div class="col-md-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="d-sm-flex align-items-baseline report-summary-header">
+                          <h5 class="font-weight-semibold">Report Summary</h5> <span class="ml-auto">Updated Report</span> <button class="btn btn-icons border-0 p-2"><i class="icon-refresh"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row report-inner-cards-wrapper">
+                      <div class=" col-md -6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <span class="report-title">EXPENSE</span>
+                          <h4>$32123</h4>
+                          <span class="report-count"> 2 Reports</span>
+                        </div>
+                        <div class="inner-card-icon bg-success">
+                          <i class="icon-rocket"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <span class="report-title">PURCHASE</span>
+                          <h4>95,458</h4>
+                          <span class="report-count"> 3 Reports</span>
+                        </div>
+                        <div class="inner-card-icon bg-danger">
+                          <i class="icon-briefcase"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <span class="report-title">QUANTITY</span>
+                          <h4>2650</h4>
+                          <span class="report-count"> 5 Reports</span>
+                        </div>
+                        <div class="inner-card-icon bg-warning">
+                          <i class="icon-globe-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <span class="report-title">RETURN</span>
+                          <h4>25,542</h4>
+                          <span class="report-count"> 9 Reports</span>
+                        </div>
+                        <div class="inner-card-icon bg-primary">
+                          <i class="icon-diamond"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row income-expense-summary-chart-text">
+                      <div class="col-xl-4">
+                        <h5>Income And Expenses Summary</h5>
+                        <p class="small text-muted">A comparison of people who mark themselves of their ineterest from the date range given above. Learn more.</p>
+                      </div>
+                      <div class=" col-md-3 col-xl-2">
+                        <p class="income-expense-summary-chart-legend"> <span style="border-color: #6469df"></span> Total Income </p>
+                        <h3>$ 1,766.00</h3>
+                      </div>
+                      <div class="col-md-3 col-xl-2">
+                        <p class="income-expense-summary-chart-legend"> <span style="border-color: #37ca32"></span> Total Expense </p>
+                        <h3>$ 5,698.30</h3>
+                      </div>
+                      <div class="col-md-6 col-xl-4 d-flex align-items-center">
+                        <div class="input-group" id="income-expense-summary-chart-daterange">
+                          <div class="inpu-group-prepend input-group-text"><i class="icon-calendar"></i></div>
+                          <input type="text" class="form-control">
+                          <div class="input-group-prepend input-group-text"><i class="icon-arrow-down"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row income-expense-summary-chart mt-3">
+                      <div class="col-md-12">
+                        <div class="ct-chart" id="income-expense-summary-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-sm-flex align-items-center mb-4">
+                      <h4 class="card-title mb-sm-0">Products Inventory</h4>
+                      <a href="#" class="text-dark ml-auto mb-3 mb-sm-0"> View all Products</a>
+                    </div>
+                    <div class="table-responsive border rounded p-1">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="font-weight-bold">Store ID</th>
+                            <th class="font-weight-bold">Amount</th>
+                            <th class="font-weight-bold">Gateway</th>
+                            <th class="font-weight-bold">Created at</th>
+                            <th class="font-weight-bold">Paid at</th>
+                            <th class="font-weight-bold">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <img class="img-sm rounded-circle" src="images/faces/face1.jpg" alt="profile image"> Katie Holmes
+                            </td>
+                            <td>$3621</td>
+                            <td><img src="images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
+                            <td>04 Jun 2019</td>
+                            <td>18 Jul 2019</td>
+                            <td>
+                              <div class="badge badge-success p-2">Paid</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <img class="img-sm rounded-circle" src="images/faces/face2.jpg" alt="profile image"> Minnie Copeland
+                            </td>
+                            <td>$6245</td>
+                            <td><img src="images/dashboard/paypal.png" alt="alipay" class="gateway-icon mr-2"> Paypal</td>
+                            <td>25 Sep 2019</td>
+                            <td>07 Oct 2019</td>
+                            <td>
+                              <div class="badge badge-danger p-2">Pending</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <img class="img-sm rounded-circle" src="images/faces/face3.jpg" alt="profile image"> Rodney Sims
+                            </td>
+                            <td>$9265</td>
+                            <td><img src="images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
+                            <td>12 dec 2019</td>
+                            <td>26 Aug 2019</td>
+                            <td>
+                              <div class="badge badge-warning p-2">Failed</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <img class="img-sm rounded-circle" src="images/faces/face4.jpg" alt="profile image"> Carolyn Barker
+                            </td>
+                            <td>$2263</td>
+                            <td><img src="images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
+                            <td>30 Sep 2019</td>
+                            <td>20 Oct 2019</td>
+                            <td>
+                              <div class="badge badge-success p-2">Paid</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="d-flex mt-4 flex-wrap">
+                      <p class="text-muted">Showing 1 to 10 of 57 entries</p>
+                      <nav class="ml-auto">
+                        <ul class="pagination separated pagination-info">
+                          <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-left"></i></a></li>
+                          <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                          <li class="page-item"><a href="#" class="page-link">2</a></li>
+                          <li class="page-item"><a href="#" class="page-link">3</a></li>
+                          <li class="page-item"><a href="#" class="page-link">4</a></li>
+                          <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html --
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © cuzradio.com 2022</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a href="" target="_blank"></a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+          
+        
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    
+    </div>
+  <div class="footer" style="color:black;">
+      
+    <div class="row d-flex justify-content-between" style="color:black;">
+        <div class="col-"><a href ="index-2.html"><i class="fa-solid fa-home fa-lg"><br></i></a></div>
+        <div class="col-"><a href ="view_staged.html"><i class="fa-solid fa-bank  fa-lg"><br></i></a></div>
+        <div class="col-" > <button  type="button" data-toggle="modal" data-target="#exampleModal" style=" color:black; border:none; background:white; border-radius:100px;"> <i id = "egg" class="fa-solid fa-circle-plus fa-lg"><br></i></button></div>
+        <div class="col-"><a href ="view_withdrws.html"><i class="fa-solid fa-box fa-lg"><br></i></a></div>
+        <div class="col-"><a href ="https://cuzradio.com/App_playlist/playlist/CodemiTechAuthKit/login.html"><i class="fa-solid fa-user fa-lg"><br></i></a></div>
+        
+        </div>
+
+</div>    
+        
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenterXY" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Customized Playlist</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+           <div class="col-"><a href="lifestyle.html"><button id="kjs"> Customize Now </button></a></div>
+            <div class="col-"><a href="#"><button id="kjs"> Play Customized</button></a></div>
+           </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/moment/moment.min.js"></script>
+    <script src="vendors/daterangepicker/daterangepicker.js"></script>
+    <script src="vendors/chartist/chartist.min.js"></script>
+    <script src="vendors/cspd-player.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="js/off-canvas.js"></script>
+    <script src="js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="js/dashboard.js"></script>
+    <script>
+    $(document).ready (function(){
+    
+    
+    
+    var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+      // document.getElementById("staged_bal").innerHTML = "12345";
+  let bv =  xhttp.responseText.replace(/\"/g, "");
+  let bvx = Intl.NumberFormat('en-US', {style: 'currency', currency: 'NGN'})
+.format(bv);
+
+  
+       document.getElementById("staged_bal").innerHTML =bvx;
+    }
+};
+xhttp.open("GET", "stg_bal.php", true);
+xhttp.send();
+    
+      
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    $(document).ready (function(){
+    
+    
+    
+    var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+      // document.getElementById("staged_bal").innerHTML = "12345";
+  let bvt =  xhttp.responseText.replace(/\"/g, "");
+  let bvxt = Intl.NumberFormat('en-US', {style: 'currency', currency: 'NGN'})
+.format(bvt);
+
+  
+       document.getElementById("staged_balt").innerHTML =bvxt;
+    }
+};
+xhttp.open("GET", "stg_balt.php", true);
+xhttp.send();
+    
+      
+    });
+    
+    
+    
+    
+    
+    
+    //////////////////////////////
+    // A $( document ).ready() block.
+$(document).ready(function() {
+   // alert("Working...");
+    //console.log( "ready!" );
+    
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        
+        
+    if (this.readyState == 4 && this.status == 200) {
+    //Typical action to be performed when the document is ready:
+    //const myObj = JSON.parse(this.responseText);
+    //console.log(JSON.parse(this.responseText););
+
+         document.getElementById("tab1").innerHTML = myObj.id;
+         document.getElementById("tab2").innerHTML = myObj.Playlist_ID;
+         document.getElementById("tab3").innerHTML = myObj.title;
+         document.getElementById("tab4").innerHTML = myObj.Mode;
+         document.getElementById("tab1").innerHTML = xhttp.responseText;
+          document.getElementById("tab2").innerHTML = xhttp.responseText;
+        // console.log(xhttp.responseText);
+  
+    }
+};
+
+xhttp.open("GET", "https://cuzradio.com/App_playlist/playlist/playlist_n.php", true);
+xhttp.send();
+ 
+ 
+});
+
+    </script>
+    
+    <script>
+   function Getter(){
+       const o =  document.getElementById("pl1id");
+       // window.alert(o);
+    }
+    </script>
+    <!-- End custom js for this page -->
+    
+     <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+</script>
+<script src="https://use.fontawesome.com/c6a50f2c49.js"></script>
+   <script>
+function callit(){
+var curyi = document.getElementById("cury").value;
+
+// Create our number formatter.
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: curyi,
+
+  // These options are needed to round to whole numbers if that's what you want.
+  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+  //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});
+
+//console.log(formatter.format(2500)); /* $2,500.00 */
+
+
+var sub_type = 0;
+var amtx = document.getElementById("amt").value;
+//alert(amtx)
+if(amtx  <= 1000){
+sub_type = 13.05;
+}
+if(amtx >  1000){
+sub_type  = 15;
+}
+
+if(amtx > 5000){
+sub_type  = 20;
+}
+
+if(amtx > 20000){
+sub_type  = 20;
+}
+
+/*f(amtx > 50000){
+sub_type  = 200;
+}*/
+if(amtx > 500000){
+sub_type  = 99.87;
+}
+
+if(amtx > 1000000){
+sub_type  = 99.89;
+}
+
+var cht = amtx + sub_type / 100;
+
+
+document.getElementById("ish").innerHTML= formatter.format(amtx);
+
+
+
+
+
+
+
+
+document.getElementById("crg").innerHTML= formatter.format(sub_type);
+document.getElementById("crtl").innerHTML= formatter.format(cht);
+
+
+
+
+
+
+
+}
+
+function makePayment(amtx) {
+    FlutterwaveCheckout({
+      public_key: "FLWPUBK_TEST-21a5653d9f10640417fe23a2aa7a15d0-X",
+      tx_ref: "titanic-48981487343MDI0NyeyzMx",
+      amount: amtx,
+      currency: "NGN",
+      payment_options: "card, banktransfer, ussd",
+      redirect_url: "https://glaciers.titanic.com/handle-flutterwa",
+      meta: {
+        consumer_id: 23,
+        consumer_mac: "92a3-912ba-1192a",
+      },
+      customer: {
+        email: "rose@unsinkableship.com",
+        phone_number: "08102909304",
+        name: "Rose DeWitt Bukater",
+      },
+      customizations: {
+        title: "The Titanic Store",
+        description: "Payment for an awesome cruise",
+        logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
+      },
+    });
+  }
+
+</script>
+
+<!-- Mirrored from cuzradio.com/tc/CodemiTechAuthKit/Stellar-master/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Apr 2023 10:06:12 GMT -->
+</html>
